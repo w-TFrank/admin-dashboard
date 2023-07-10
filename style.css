@@ -1,6 +1,11 @@
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
 }
 
 html, body {
@@ -77,26 +82,36 @@ html, body {
     background-color: lightgrey;
     grid-column: 2 / 3;
     grid-row: 2 / 5;
-    grid-template-columns: 2fr 1fr;
-    gap: 15px;
-    padding: 15px;
+    grid-template-columns: 2fr 300px;
+    grid-template-rows: 20px 1fr;
+    gap: 25px;
+    padding: 25px;
 }
 
-.main-top-headers {
+.main-headers {
     display: grid;
+    padding-top: 15px;
     grid-column: 1 / 3;
+    grid-row: 1 / 2;
 }
 
-.main-top-headers ul {
+.main-headers ul {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 300px;
 }
 
-.projects {
+.main-left-clm {
     display: grid;
-    gap: 15px;
     grid-column: 1 / 2;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-rows: repeat(3, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.main-right-clm {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
 }
 
 .project-card {
@@ -117,14 +132,17 @@ html, body {
 
 .trending {
     display: grid;
-    padding-top: 15px;
+    padding-top: 25px;
+    grid-template-rows: 30px 1fr;
 }
 
 .trending-card ul {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
     gap: 15px;
-    padding: 10px;
+    padding-left: 15px;
+    height: 99.7%;
 }
